@@ -1,5 +1,3 @@
-# skin-cancer-detection-ml
-
 # Skin Cancer Detection using Machine Learning
 
 ## Objective
