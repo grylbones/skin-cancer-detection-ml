@@ -18,10 +18,12 @@ To build a convolutional neural network (CNN) that classifies dermoscopic skin l
 - Evaluated using confusion matrix, precision, recall, and F1-score.
 
 ## Results
-- Baseline CNN achieved ~80% validation accuracy.
-- Accuracy alone was insufficient due to class imbalance.
-- Introducing class weights improved recall for malignant cases, at the cost of higher false positives.
-- Model behavior aligns with medical priorities where missing cancer is more costly than false alarms.
+- Validation accuracy: 81%, driven primarily by correct classification of benign lesions.
+- Confusion matrix analysis revealed strong class imbalance effects.
+- Benign recall was very high (0.99), indicating reliable identification of non-cancerous cases.
+- Malignant recall was low (0.07), with 368 out of 395 malignant cases misclassified as benign.
+- This demonstrates that accuracy alone is insufficient for evaluating medical image classifiers and highlights the need for imbalance-aware training strategies.
+
 
 ## Limitations
 - Dataset is highly imbalanced.
