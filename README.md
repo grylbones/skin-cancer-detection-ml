@@ -17,12 +17,25 @@ To build a convolutional neural network (CNN) that classifies dermoscopic skin l
 - Addressed class imbalance using class weighting.
 - Evaluated using confusion matrix, precision, recall, and F1-score.
 
-## Results
-- Validation accuracy: 81%, driven primarily by correct classification of benign lesions.
-- Confusion matrix analysis revealed strong class imbalance effects.
-- Benign recall was very high (0.99), indicating reliable identification of non-cancerous cases.
-- Malignant recall was low (0.07), with 368 out of 395 malignant cases misclassified as benign.
-- This demonstrates that accuracy alone is insufficient for evaluating medical image classifiers and highlights the need for imbalance-aware training strategies.
+]## Results
+
+Two models were evaluated: a baseline CNN and Logistic Regression, using a held-out validation set of 2,015 images.
+
+### CNN (Baseline)
+- Validation Accuracy: ~81%
+- Benign Recall: ~0.99
+- Malignant Recall: ~0.07
+- Confusion matrix analysis showed that 368 out of 395 malignant cases were misclassified as benign.
+- The model exhibited strong bias toward the majority (benign) class, making accuracy misleading for medical evaluation.
+
+### Logistic Regression (Classical Baseline)
+- Validation Accuracy: ~80%
+- Malignant Recall: ~0.32 (126 / 395 malignant cases correctly identified)
+- Precision (Malignant): ~0.47
+- False negatives reduced significantly compared to the CNN baseline, at the cost of increased false positives.
+
+### Key Takeaway
+Although both models achieved similar accuracy, Logistic Regression detected substantially more malignant cases. This comparison demonstrates that accuracy alone is insufficient for medical image classification and highlights the importance of recall-focused evaluation under class imbalance.
 
 
 ## Limitations
