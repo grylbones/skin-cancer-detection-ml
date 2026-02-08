@@ -17,7 +17,7 @@ To build a convolutional neural network (CNN) that classifies dermoscopic skin l
 - Addressed class imbalance using class weighting.
 - Evaluated using confusion matrix, precision, recall, and F1-score.
 
-]## Results
+## Results
 
 Two models were evaluated: a baseline CNN and Logistic Regression, using a held-out validation set of 2,015 images.
 
